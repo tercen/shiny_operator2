@@ -77,18 +77,6 @@ getValues = function(session){
 
 ```
 
-# Deployment
-## shinyapps.io
-
-Visit https://www.shinyapps.io/
-
-## tercen.com
-
-[Next to come](https://tercen.com) ...
-
-## How to link a shiny app into a Tercen workflow ?
-
-An External View step can be used.
 
 
 
