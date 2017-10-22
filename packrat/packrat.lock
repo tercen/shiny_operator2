@@ -1,0 +1,186 @@
+PackratFormat: 1.4
+PackratVersion: 0.4.8.1
+RVersion: 3.3.2
+Repos: BioCsoft=https://bioconductor.org/packages/3.4/bioc,
+    BioCann=https://bioconductor.org/packages/3.4/data/annotation,
+    BioCexp=https://bioconductor.org/packages/3.4/data/experiment,
+    BioCextra=https://bioconductor.org/packages/3.4/extra,
+    CRAN=https://cran.rstudio.com/
+
+Package: BH
+Source: CRAN
+Version: 1.65.0-1
+Hash: 95f62be4d6916aae14a310a8b56a6475
+
+Package: R6
+Source: CRAN
+Version: 2.2.2
+Hash: b2366cd9d2f3851a5704b4e192b985c2
+
+Package: Rcpp
+Source: CRAN
+Version: 0.12.13
+Hash: b9d8d89ff10ca2d8bfdaccdf83045ba1
+
+Package: assertthat
+Source: CRAN
+Version: 0.2.0
+Hash: e8805df54c65ac96d50235c44a82615c
+
+Package: bindr
+Source: CRAN
+Version: 0.1
+Hash: e3a02070cf705d3ad1c5af1635a515a3
+
+Package: bindrcpp
+Source: CRAN
+Version: 0.2
+Hash: e011aef1e6b2f8ff15d833f56abcf0ba
+Requires: Rcpp, bindr, plogr
+
+Package: curl
+Source: CRAN
+Version: 3.0
+Hash: fb0029f1c84bf9b510c4f55cda7103f1
+
+Package: digest
+Source: CRAN
+Version: 0.6.9
+Hash: fd55d5a024f160fc001a5ece1e27782d
+
+Package: dplyr
+Source: CRAN
+Version: 0.7.4
+Hash: 8f4e0074ac488385f084e27bf6f54d41
+Requires: BH, R6, Rcpp, assertthat, bindrcpp, glue, magrittr,
+    pkgconfig, plogr, rlang, tibble
+
+Package: glue
+Source: CRAN
+Version: 1.1.1
+Hash: dfd5a27768175ae51d08dc6beba1ef11
+
+Package: htmltools
+Source: CRAN
+Version: 0.3.5
+Hash: 6599eb20899a8b008f2374b66892d697
+Requires: Rcpp, digest
+
+Package: httpuv
+Source: CRAN
+Version: 1.3.5
+Hash: 6fb95f48d0fbf453ad18ace1606b6192
+Requires: Rcpp
+
+Package: httr
+Source: CRAN
+Version: 1.3.1
+Hash: 2d32e01e53d532c812052e27a1021441
+Requires: R6, curl, jsonlite, mime, openssl
+
+Package: jsonlite
+Source: CRAN
+Version: 1.5
+Hash: 9c51936d8dd00b2f1d4fe9d10499694c
+
+Package: magrittr
+Source: CRAN
+Version: 1.5
+Hash: bdc4d48c3135e8f3b399536ddf160df4
+
+Package: mime
+Source: CRAN
+Version: 0.5
+Hash: 463550cf44fb6f0a2359368f42eebe62
+
+Package: miniUI
+Source: CRAN
+Version: 0.1.1
+Hash: e85626581f80b1fe6c92a96ec348efc5
+Requires: htmltools, shiny
+
+Package: openssl
+Source: CRAN
+Version: 0.9.7
+Hash: 225d43f64f60e8996d10efe15b381c66
+
+Package: packrat
+Source: CRAN
+Version: 0.4.8-1
+Hash: 6ad605ba7b4b476d84be6632393f5765
+
+Package: pkgconfig
+Source: CRAN
+Version: 2.0.1
+Hash: 0dda4a2654a22b36a715c2b0b6fbacac
+
+Package: plogr
+Source: CRAN
+Version: 0.1-1
+Hash: fb19215402e2d9f1c7f803dcaa806fc2
+
+Package: purrr
+Source: CRAN
+Version: 0.2.4
+Hash: a80b244ccd3fdb33a0ff2be3c50dd648
+Requires: magrittr, rlang, tibble
+
+Package: rlang
+Source: CRAN
+Version: 0.1.2
+Hash: c17b638e3282aa222a47112d7a60bc66
+
+Package: rtson
+Source: github
+Version: 1.4
+Hash: 473b8049bcd0e3b9bf7c28cfe24db8f9
+Requires: R6
+GithubRepo: TSON
+GithubUsername: tercen
+GithubRef: 1.4-rtson
+GithubSha1: efea4bdc41d67e979199ba80376d41ec7fe7208f
+GithubSubdir: rtson
+
+Package: shiny
+Source: CRAN
+Version: 1.0.5
+Hash: 4d47532a807122bfd6bc3818310f9d2e
+Requires: R6, digest, htmltools, httpuv, jsonlite, mime, sourcetools,
+    xtable
+
+Package: shinyjs
+Source: CRAN
+Version: 0.9.1
+Hash: 80334571084beac03513e51be8a35554
+Requires: digest, htmltools, jsonlite, miniUI, shiny
+
+Package: sourcetools
+Source: CRAN
+Version: 0.1.5
+Hash: 04ddeb1c288302222562326a471e2945
+
+Package: tercen
+Source: github
+Version: 0.4.1
+Hash: 73f11d24c7b6398649f20fc454f481be
+Requires: R6, dplyr, httr, jsonlite, purrr, rlang, rtson, tibble, yaml
+GithubRepo: teRcen
+GithubUsername: tercen
+GithubRef: 0.4.1
+GithubSha1: 2ba2b1ff924be21e6d64d4d97313117dc2115cea
+
+Package: tibble
+Source: CRAN
+Version: 1.3.4
+Hash: 3b72bdedb6c27fb216574ab9b15f2d43
+Requires: Rcpp, rlang
+
+Package: xtable
+Source: CRAN
+Version: 1.8-2
+Hash: 7293235cfcc14cdff1ce7fd1a0212031
+
+Package: yaml
+Source: CRAN
+Version: 2.1.14
+Hash: c81230c3a7d9ba20607ad6b4331173d1
