@@ -10,7 +10,7 @@ remove.packages("rtson", lib = "./packrat/lib/x86_64-pc-linux-gnu/3.3.2")
 remove.packages("tercen", lib = "./packrat/lib/x86_64-pc-linux-gnu/3.3.2")
 
 devtools::install_github("tercen/TSON", ref = "1.4-rtson", subdir="rtson", upgrade_dependencies = FALSE)
-devtools::install_github("tercen/teRcen", ref = "0.4.1", upgrade_dependencies = FALSE)
+devtools::install_github("tercen/teRcen", ref = "0.4.2", upgrade_dependencies = FALSE)
 
 packrat::status()
 packrat::snapshot()
