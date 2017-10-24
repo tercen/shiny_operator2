@@ -161,13 +161,13 @@ Hash: 04ddeb1c288302222562326a471e2945
 
 Package: tercen
 Source: github
-Version: 0.4.2
-Hash: 200159df24535b5d1c04eb5819109dc3
+Version: 0.4.3
+Hash: 85d8b19476731888ec1b27c82c76b24c
 Requires: R6, dplyr, httr, jsonlite, purrr, rlang, rtson, tibble, yaml
 GithubRepo: teRcen
 GithubUsername: tercen
-GithubRef: 0.4.2
-GithubSha1: 9f8deaa1034f6bb35c9fdf1d7885b3777e386304
+GithubRef: 0.4.3
+GithubSha1: e6e107e2784fdf746cdb3089bd4b2075313053b0
 
 Package: tibble
 Source: CRAN
