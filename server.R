@@ -64,17 +64,12 @@ getMode = function(session){
 getCtx = function(session){
   # retreive url query parameters provided by tercen
   query = parseQueryString(session$clientData$url_search)
-  
-  print(query)
+
   token = query[["token"]]
-  workflowId = query[["workflowId"]]
-  stepId = query[["stepId"]]
   taskId = query[["taskId"]]
-  serviceUri = query[["serviceUri"]]
-  mode = query[["mode"]]
   
   # create a Tercen context object using the token
-  ctx = tercenCtx(workflowId=workflowId, stepId=stepId, taskId=taskId, authToken=token, serviceUri=serviceUri)
+  ctx = tercenCtx(taskId=taskId, authToken=token)
   
   return(ctx)
 }
