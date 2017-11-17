@@ -23,9 +23,9 @@ shinyServer(function(input, output, session) {
     shinyjs::show("runStatus")
     
     (ctx = getCtx(session))  %>% 
-      select(.values, .cindex, .rindex) %>% 
-      group_by(.cindex, .rindex) %>%
-      summarise(mean = mean(.values)) %>%
+      select(.y, .ci, .ri) %>% 
+      group_by(.ci, .ri) %>%
+      summarise(mean = mean(.y)) %>%
       ctx$addNamespace() %>%
       ctx$save()
     
@@ -42,14 +42,12 @@ shinyServer(function(input, output, session) {
       shinyjs::enable("runBtn")
     }
     # generate bins based on input$bins from ui.R
-    x    <- dataInput()[['.values']]
+    x    <- dataInput()[['.y']]
     
     bins <- seq(min(x), max(x), length.out = input$bins + 1)
     
     # draw the histogram with the specified number of bins
     hist(x, breaks = bins, col = 'darkgray', border = 'white')
-    
-    
     
   })
   
@@ -76,6 +74,6 @@ getCtx = function(session){
 
 getValues = function(session){
   ctx = getCtx(session)
-  data = ctx %>% select(.values , .cindex , .rindex )
+  data = ctx %>% select(.y , .ci , .ri )
   return(data)
 }
