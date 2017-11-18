@@ -59,11 +59,13 @@ Hash: 381e42baedecc633c0e547a0c7ca9de7
 Package: htmltools
 Source: CRAN
 Version: 0.3.6
+Hash: 34e5c725d3ae30a76516792edcc16f24
 Requires: Rcpp, digest
 
 Package: httpuv
 Source: CRAN
 Version: 1.3.5
+Hash: 6fb95f48d0fbf453ad18ace1606b6192
 Requires: Rcpp
 
 Package: httr
@@ -90,6 +92,7 @@ Hash: 463550cf44fb6f0a2359368f42eebe62
 Package: miniUI
 Source: CRAN
 Version: 0.1.1
+Hash: e85626581f80b1fe6c92a96ec348efc5
 Requires: htmltools, shiny
 
 Package: openssl
@@ -135,27 +138,30 @@ GithubSubdir: rtson
 Package: shiny
 Source: CRAN
 Version: 1.0.5
-Requires: R6, digest, jsonlite, mime, htmltools, httpuv, sourcetools,
+Hash: 4d47532a807122bfd6bc3818310f9d2e
+Requires: R6, digest, htmltools, httpuv, jsonlite, mime, sourcetools,
     xtable
 
 Package: shinyjs
 Source: CRAN
 Version: 0.9.1
-Requires: digest, jsonlite, htmltools, miniUI, shiny
+Hash: 80334571084beac03513e51be8a35554
+Requires: digest, htmltools, jsonlite, miniUI, shiny
 
 Package: sourcetools
 Source: CRAN
 Version: 0.1.6
+Hash: 226d56d7469587da40b0f96180e711b4
 
 Package: tercen
 Source: github
-Version: 0.4.8
-Hash: 1659a1f371019d434e81c765c5832393
+Version: 0.4.9
+Hash: efcb28d52d5491170d0141308fc161f3
 Requires: R6, dplyr, httr, jsonlite, rtson, tibble, yaml
 GithubRepo: teRcen
 GithubUsername: tercen
-GithubRef: 0.4.8
-GithubSha1: 82ea4a0d7442b7a532443ba806aa1622bd4c08df
+GithubRef: 0.4.9
+GithubSha1: 5a908e7757fdff17a75ad7f6bc8a5e8127114dba
 
 Package: tibble
 Source: CRAN
@@ -166,6 +172,7 @@ Requires: Rcpp, rlang
 Package: xtable
 Source: CRAN
 Version: 1.8-2
+Hash: 7293235cfcc14cdff1ce7fd1a0212031
 
 Package: yaml
 Source: CRAN
