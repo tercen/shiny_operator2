@@ -155,13 +155,13 @@ Hash: 8eb4b2dce38b8f663cb9364b28eaa76b
 
 Package: rtson
 Source: github
-Version: 1.4
-Hash: 473b8049bcd0e3b9bf7c28cfe24db8f9
+Version: 1.4.2
+Hash: d5b02b96355a20afd430ab65266110f0
 Requires: R6
 GithubRepo: TSON
 GithubUsername: tercen
-GithubRef: 1.4-rtson
-GithubSha1: efea4bdc41d67e979199ba80376d41ec7fe7208f
+GithubRef: 1.4.2-rtson
+GithubSha1: 29e08ba9da3a2838a73a973404a43f77f9232c3b
 GithubSubdir: rtson
 
 Package: shiny
