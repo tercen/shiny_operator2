@@ -5,8 +5,8 @@ Repos: CRAN=http://cran.rstudio.com/
 
 Package: BH
 Source: CRAN
-Version: 1.65.0-1
-Hash: 95f62be4d6916aae14a310a8b56a6475
+Version: 1.66.0-1
+Hash: 4cc8883584b955ed01f38f68bc03af6d
 
 Package: R6
 Source: CRAN
@@ -15,8 +15,8 @@ Hash: b2366cd9d2f3851a5704b4e192b985c2
 
 Package: Rcpp
 Source: CRAN
-Version: 0.12.13
-Hash: b9d8d89ff10ca2d8bfdaccdf83045ba1
+Version: 0.12.18
+Hash: c80398774358bc105b9f91f7f7519d7a
 
 Package: assertthat
 Source: CRAN
@@ -25,13 +25,13 @@ Hash: e8805df54c65ac96d50235c44a82615c
 
 Package: bindr
 Source: CRAN
-Version: 0.1
-Hash: e3a02070cf705d3ad1c5af1635a515a3
+Version: 0.1.1
+Hash: 76578c5f543a6ecbc1365d6445f9ebf7
 
 Package: bindrcpp
 Source: CRAN
-Version: 0.2
-Hash: e011aef1e6b2f8ff15d833f56abcf0ba
+Version: 0.2.2
+Hash: d1189679aec436c9280c498e5d01eaa8
 Requires: Rcpp, bindr, plogr
 
 Package: cli
@@ -57,26 +57,26 @@ Hash: e53fb8c58673df868183697e39a6a4d6
 
 Package: dplyr
 Source: CRAN
-Version: 0.7.4
-Hash: 8f4e0074ac488385f084e27bf6f54d41
+Version: 0.7.6
+Hash: c3ab15fec1303345fea300dfbc34d995
 Requires: BH, R6, Rcpp, assertthat, bindrcpp, glue, magrittr,
-    pkgconfig, plogr, rlang, tibble
+    pkgconfig, plogr, rlang, tibble, tidyselect
 
 Package: glue
 Source: CRAN
-Version: 1.2.0
-Hash: 381e42baedecc633c0e547a0c7ca9de7
+Version: 1.3.0
+Hash: 1fbde6dec830370be696eee8ef31c9e4
 
 Package: htmltools
 Source: CRAN
 Version: 0.3.6
-Hash: 34e5c725d3ae30a76516792edcc16f24
+Hash: 87bd72cdfc46f686bbd46b180cb5f0b5
 Requires: Rcpp, digest
 
 Package: httpuv
 Source: CRAN
 Version: 1.4.1
-Hash: 1a564e53681273a150f2925b4eb4cec8
+Hash: c7f51740fcf3c4230dbf7c934548833a
 Requires: BH, Rcpp, later, promises
 
 Package: httr
@@ -93,7 +93,7 @@ Hash: 9c51936d8dd00b2f1d4fe9d10499694c
 Package: later
 Source: CRAN
 Version: 0.7.1
-Hash: e778b1d7e6d86286080800ed82d4b5c8
+Hash: a821efdc98f2b7480351cb8fbd4126a3
 Requires: BH, Rcpp, rlang
 
 Package: magrittr
@@ -134,34 +134,40 @@ Requires: cli, crayon, rlang, utf8
 
 Package: pkgconfig
 Source: CRAN
-Version: 2.0.1
-Hash: 0dda4a2654a22b36a715c2b0b6fbacac
+Version: 2.0.2
+Hash: b0fd6ed908e150b77e5f00c6478bd58c
 
 Package: plogr
 Source: CRAN
-Version: 0.1-1
-Hash: fb19215402e2d9f1c7f803dcaa806fc2
+Version: 0.2.0
+Hash: 81a8008a5e7858552503935f1abe48aa
 
 Package: promises
 Source: CRAN
 Version: 1.0.1
-Hash: 34f4c436132c5e37f1647fbe83ca5417
+Hash: 3fc28378ed7e54393c9695c9d54eb2a7
 Requires: R6, Rcpp, later, magrittr, rlang
+
+Package: purrr
+Source: CRAN
+Version: 0.2.5
+Hash: 8b0c16db10c7e20b70cd37779a673a8b
+Requires: magrittr, rlang, tibble
 
 Package: rlang
 Source: CRAN
-Version: 0.1.6
-Hash: 8eb4b2dce38b8f663cb9364b28eaa76b
+Version: 0.2.2
+Hash: 49b735b7b1d14f561d21cce12c6703df
 
 Package: rtson
 Source: github
-Version: 1.4.2
-Hash: d5b02b96355a20afd430ab65266110f0
+Version: 1.4.4
+Hash: f41468e22b9401b04bcf834f2f6e8b40
 Requires: R6
 GithubRepo: TSON
 GithubUsername: tercen
-GithubRef: 1.4.2-rtson
-GithubSha1: 29e08ba9da3a2838a73a973404a43f77f9232c3b
+GithubRef: 1.4.4-rtson
+GithubSha1: 01c0ff70ed30b7332f506403713158959492f8ca
 GithubSubdir: rtson
 
 Package: shiny
@@ -184,19 +190,25 @@ Hash: 226d56d7469587da40b0f96180e711b4
 
 Package: tercen
 Source: github
-Version: 0.6.2
-Hash: 1b8f582100f05268401b4ed0b5ad1b32
+Version: 0.7.1
+Hash: 395a2ad9de89c60c3e44aeb118ffb6d2
 Requires: R6, dplyr, httr, jsonlite, rtson, tibble, yaml
 GithubRepo: teRcen
 GithubUsername: tercen
-GithubRef: 0.6.2
-GithubSha1: 13949d4bbee02425b400a48b27d9554046c0a083
+GithubRef: 0.7.1
+GithubSha1: 4f6cae07ca68202680409fb985db18be63a2e89a
 
 Package: tibble
 Source: CRAN
 Version: 1.4.2
 Hash: 83895360ce4f8d2ce92eee00526b5b0b
 Requires: cli, crayon, pillar, rlang
+
+Package: tidyselect
+Source: CRAN
+Version: 0.2.4
+Hash: 83708a870de7a4063e31f3f7f5a13f26
+Requires: Rcpp, glue, purrr, rlang
 
 Package: utf8
 Source: CRAN
@@ -210,5 +222,5 @@ Hash: 7293235cfcc14cdff1ce7fd1a0212031
 
 Package: yaml
 Source: CRAN
-Version: 2.1.18
-Hash: 28c7e28c239d7a1d1bd579390bab89bd
+Version: 2.2.0
+Hash: a5ad5616d83d89f8d84cbf3cf4034e13
