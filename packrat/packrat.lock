@@ -196,17 +196,17 @@ Hash: d093478ac90064e670cd4bf1a99b47b6
 
 Package: tercen
 Source: github
-Version: 0.8.0
-Hash: b7373eae82f5b84d167d399cfebd7d88
+Version: 0.8.2
+Hash: 1cd09ad5217f2bf44be3bf641e68a9f8
 Requires: R6, dplyr, httr, jsonlite, rtson, tibble, yaml
 GithubRepo: teRcen
 GithubUsername: tercen
-GithubRef: 0.8.0
-GithubSha1: 68075054d6bdb4aa7760e2cba7eb5f51092a5c30
+GithubRef: 0.8.2
+GithubSha1: e7ed18b3f84c7b9a4cc9a5c02189afd6e5d6fb95
 RemoteHost: api.github.com
 RemoteRepo: teRcen
 RemoteUsername: tercen
-RemoteSha: 68075054d6bdb4aa7760e2cba7eb5f51092a5c30
+RemoteSha: e7ed18b3f84c7b9a4cc9a5c02189afd6e5d6fb95
 
 Package: tibble
 Source: CRAN
