@@ -10,11 +10,10 @@ library(shinyjs)
 library(tercen)
 library(dplyr)
 library(jsonlite)
- 
-options("tercen.workflowId"= "3aa8703da6b7534488c2f9632a0c0b0d")
-options("tercen.stepId"= "282-14")
-options("tercen.username"= "admin")
-options("tercen.password"= "admin")
+  
+# http://127.0.0.1:5402/#ds/2ecef2b0b686d7fde25f34eeb8005605/6-3
+options("tercen.workflowId"= "2ecef2b0b686d7fde25f34eeb8005605")
+options("tercen.stepId"= "6-3")
 
 shinyServer(function(input, output, session) {
   
@@ -125,6 +124,7 @@ setSettings = function(session, settings){
   metaStepId$value = stepId
   
   fileDoc$meta = list(metaWorkflowId, metaStepId)
+  
   content = toJSON(settings)
   bytes = charToRaw(content)
   fileDoc = ctx$client$fileService$upload(fileDoc, bytes)
@@ -135,7 +135,6 @@ getFileSettings = function(session) {
   ctx = getCtx(session)
   workflowId = getWorkflowId(session)
   stepId = getStepId(session)
-  workflow = ctx$client$workflowService$get(workflowId)
   
   files = ctx$client$fileService$findFileByWorkflowIdAndStepId(
     startKey=list(workflowId,stepId),
@@ -156,14 +155,16 @@ getMode = function(session){
 }
 
 getWorkflowId = function(session){
-  return(getOption("tercen.workflowId"))
+  workflowId = getOption("tercen.workflowId")
+  if (!is.null(workflowId)) return(workflowId)
   # retreive url query parameters provided by tercen
   query = parseQueryString(session$clientData$url_search)
   return(query[["workflowId"]])
 }
 
 getStepId = function(session){
-  return(getOption("tercen.stepId"))
+  stepId = getOption("tercen.stepId")
+  if (!is.null(stepId)) return(stepId)
   # retreive url query parameters provided by tercen
   query = parseQueryString(session$clientData$url_search)
   return(query[["stepId"]])
