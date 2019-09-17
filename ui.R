@@ -6,6 +6,7 @@
 #
 
 library(shiny)
+library(shinyjs)
 
 shinyUI(fluidPage(
   shinyjs::useShinyjs(),
@@ -16,11 +17,12 @@ shinyUI(fluidPage(
   # Sidebar with a slider input for number of bins
   sidebarLayout(
     sidebarPanel(
-      sliderInput("bins",
-                  "Number of bins:",
-                  min = 1,
-                  max = 50,
-                  value = 30)
+      shinyjs::hidden(sliderInput("bins",
+                         "Number of bins:",
+                         min = 1,
+                         max = 50,
+                         value = 1)),
+      actionButton("saveSettingsBtn", "Save settings", disabled=FALSE)
     ),
 
     # Show a plot of the generated distribution
@@ -29,7 +31,6 @@ shinyUI(fluidPage(
       plotOutput("distPlot"),
       shinyjs::hidden(p(id = "runStatus", "Processing...")),
       actionButton("runBtn", "Run", disabled=TRUE)
-      
     )
   )
 ))
