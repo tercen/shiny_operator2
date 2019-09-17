@@ -12,8 +12,8 @@ library(dplyr)
 library(jsonlite)
   
 # http://127.0.0.1:5402/#ds/2ecef2b0b686d7fde25f34eeb8005605/6-3
-options("tercen.workflowId"= "2ecef2b0b686d7fde25f34eeb8005605")
-options("tercen.stepId"= "6-3")
+# options("tercen.workflowId"= "2ecef2b0b686d7fde25f34eeb8005605")
+# options("tercen.stepId"= "6-3")
 
 shinyServer(function(input, output, session) {
   
