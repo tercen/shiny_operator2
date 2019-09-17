@@ -178,9 +178,10 @@ getCtx = function(session){
   taskId = query[["taskId"]]
    
   # create a Tercen context object using the token
-  # ctx = tercenCtx(taskId=taskId, authToken=token)
+  ctx = tercenCtx(taskId=taskId, authToken=token)
   
-  ctx = tercenCtx()
+  # dev
+  # ctx = tercenCtx()
   
   return(ctx)
 }
