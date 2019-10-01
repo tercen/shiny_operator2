@@ -1,7 +1,7 @@
 PackratFormat: 1.4
 PackratVersion: 0.5.0
 RVersion: 3.5.3
-Repos: CRAN=https://mran.microsoft.com/snapshot/2019-04-07
+Repos: CRAN=https://cran.rstudio.com/
 
 Package: BH
 Source: CRAN
@@ -175,18 +175,18 @@ RemoteSha: 1da1be1dd817374278bf79db44c9ae2abfae820c
 
 Package: tercen
 Source: github
-Version: 0.9.1
-Hash: 1370cc7f34f3b8d13c8683431f29790c
+Version: 0.8.16
+Hash: d8e86aabb55ae08021589ee4e7d1b17b
 Requires: R6, dplyr, mtercen, teRcenHttp, tibble, yaml
 GithubRepo: teRcen
 GithubUsername: tercen
-GithubRef: 0.9.1
-GithubSha1: ebf13d282a5fa8641be0524344770477e97056fb
+GithubRef: 0.8.16
+GithubSha1: 5fb1249bfb0029139b35b870988b2222abdee4aa
 RemoteHost: api.github.com
 RemoteRepo: teRcen
 RemoteUsername: tercen
-RemoteRef: 0.9.1
-RemoteSha: ebf13d282a5fa8641be0524344770477e97056fb
+RemoteRef: 0.8.16
+RemoteSha: 5fb1249bfb0029139b35b870988b2222abdee4aa
 
 Package: tibble
 Source: CRAN
