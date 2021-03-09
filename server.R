@@ -56,6 +56,9 @@ shinyServer(function(input, output, session) {
     print("is.null(ctx)=")
     print(is.null(ctx))
     
+    print("class(ctx)")
+    print(class(ctx))
+    
     
     dd =  ctx %>% 
       select(.y, .ci, .ri) %>% 

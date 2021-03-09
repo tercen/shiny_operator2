@@ -50,6 +50,13 @@
       "Repository": "CRAN",
       "Hash": "f3ca785924863b0e4c8cb23b6a5c75a1"
     },
+    "askpass": {
+      "Package": "askpass",
+      "Version": "1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "e8a22846fff485f0be3770c2da758713"
+    },
     "assertthat": {
       "Package": "assertthat",
       "Version": "0.2.1",
@@ -162,6 +169,13 @@
       "Repository": "TERCEN",
       "Hash": "2333c0a639c728f4d3e21d3342083e02"
     },
+    "openssl": {
+      "Package": "openssl",
+      "Version": "1.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "2a9e2d199c54f6061aba18976e958b1c"
+    },
     "pillar": {
       "Package": "pillar",
       "Version": "1.4.3",
@@ -232,19 +246,26 @@
       "Repository": "CRAN",
       "Hash": "947e4e02a79effa5d512473e10f41797"
     },
+    "sys": {
+      "Package": "sys",
+      "Version": "3.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "595c352c624e65f8f67f66a77a6409b6"
+    },
     "teRcenHttp": {
       "Package": "teRcenHttp",
-      "Version": "1.0.14",
+      "Version": "1.0.20",
       "Source": "Repository",
       "Repository": "TERCEN",
-      "Hash": "5ed131ec0d0917f1a2b013e9ac44fee7"
+      "Hash": "02b62dc94dfe91684830ac27b5021502"
     },
     "tercen": {
       "Package": "tercen",
-      "Version": "0.9.5",
+      "Version": "0.10.6",
       "Source": "Repository",
       "Repository": "TERCEN",
-      "Hash": "6b8359f6781e2a0d9d0feb184930e72e"
+      "Hash": "2917b071a905ee6f745c0b22db2f795e"
     },
     "tibble": {
       "Package": "tibble",
