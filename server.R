@@ -60,8 +60,8 @@ shinyServer(function(input, output, session) {
     print(class(ctx))
     
     print("ctx$task")
-    print(ctx$task)
-    
+    print(ctx$task) 
+     
     
     dd =  ctx %>% 
       select(.y, .ci, .ri) %>% 
@@ -73,7 +73,7 @@ shinyServer(function(input, output, session) {
     
     dd = ctx$addNamespace(dd)
     
-    print("addNamespace dd=")
+    print("addNamespace dd=") 
     print(dd)
     
     ctx$save(dd)
