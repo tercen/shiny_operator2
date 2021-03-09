@@ -53,14 +53,34 @@ shinyServer(function(input, output, session) {
     
     ctx = getCtx(session)
     
-    print(paste0("ctx=", ctx))
+    print("is.null(ctx)=")
+    print(is.null(ctx))
     
-    ctx %>% 
+    
+    dd =  ctx %>% 
       select(.y, .ci, .ri) %>% 
       group_by(.ci, .ri) %>%
-      summarise(mean = mean(.y)) %>%
-      ctx$addNamespace() %>%
-      ctx$save()
+      summarise(mean = mean(.y))
+    
+    print("dd=")
+    print(dd)
+    
+    dd = ctx$addNamespace(dd)
+    
+    print("addNamespace dd=")
+    print(dd)
+    
+    ctx$save(dd)
+    
+    print("saved")
+    
+    
+    # ctx %>% 
+    #   select(.y, .ci, .ri) %>% 
+    #   group_by(.ci, .ri) %>%
+    #   summarise(mean = mean(.y)) %>%
+    #   ctx$addNamespace() %>%
+    #   ctx$save()
   })
   
   output$mode = renderText({ 
