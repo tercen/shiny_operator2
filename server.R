@@ -59,6 +59,9 @@ shinyServer(function(input, output, session) {
     print("class(ctx)")
     print(class(ctx))
     
+    print("ctx$task")
+    print(ctx$task)
+    
     
     dd =  ctx %>% 
       select(.y, .ci, .ri) %>% 
