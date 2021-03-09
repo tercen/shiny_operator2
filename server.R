@@ -51,7 +51,11 @@ shinyServer(function(input, output, session) {
     shinyjs::disable("runBtn")
     shinyjs::show("runStatus")
     
-    (ctx = getCtx(session))  %>% 
+    ctx = getCtx(session)
+    
+    print(paste0("ctx=", ctx))
+    
+    ctx %>% 
       select(.y, .ci, .ri) %>% 
       group_by(.ci, .ri) %>%
       summarise(mean = mean(.y)) %>%
