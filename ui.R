@@ -29,8 +29,8 @@ shinyUI(fluidPage(
     mainPanel(
       h3(textOutput("mode")),
       plotOutput("distPlot"),
-      shinyjs::hidden(p(id = "runStatus", "Processing...")),
-      actionButton("runBtn", "Run", disabled=TRUE)
+      actionButton("runBtn", "Run", disabled=TRUE),
+      h5(textOutput("msg"))
     )
   )
 ))

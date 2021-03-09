@@ -10,10 +10,10 @@ library(shinyjs)
 library(tercen)
 library(dplyr)
 library(jsonlite)
-  
-# http://127.0.0.1:5402/#ds/2ecef2b0b686d7fde25f34eeb8005605/6-3
-# options("tercen.workflowId"= "2ecef2b0b686d7fde25f34eeb8005605")
-# options("tercen.stepId"= "6-3")
+
+# http://127.0.0.1:5402/admin/w/77d52bb01bd3676e779828d5a50047ae/ds/36600030-7fb6-4e61-a25c-fd421ec60367
+# options("tercen.workflowId"= "77d52bb01bd3676e779828d5a50047ae")
+# options("tercen.stepId"= "36600030-7fb6-4e61-a25c-fd421ec60367")
 
 shinyServer(function(input, output, session) {
   
@@ -21,7 +21,9 @@ shinyServer(function(input, output, session) {
   mode = reactive({getMode(session)})
   settingsValue = reactiveValues()
   settingsValue$isInitialized = FALSE
-   
+  msgReactive = reactiveValues(msg = "")
+ 
+  
   observeEvent(input$saveSettingsBtn, {
     showModal(modalDialog(
       title='Saving',
@@ -39,7 +41,7 @@ shinyServer(function(input, output, session) {
     } else {
       settingsValue$value = getSettings(session)
       settingsValue$isInitialized = TRUE
- 
+      
       # update ui
       updateSliderInput(session, 'bins', value=settingsValue$value$bins)
       shinyjs::show("bins")
@@ -49,49 +51,31 @@ shinyServer(function(input, output, session) {
   observeEvent(input$runBtn, {
     
     shinyjs::disable("runBtn")
-    shinyjs::show("runStatus")
     
-    ctx = getCtx(session)
-    
-    print("is.null(ctx)=")
-    print(is.null(ctx))
-    
-    print("class(ctx)")
-    print(class(ctx))
-    
-    print("ctx$task")
-    print(ctx$task) 
-     
-    
-    dd =  ctx %>% 
-      select(.y, .ci, .ri) %>% 
-      group_by(.ci, .ri) %>%
-      summarise(mean = mean(.y))
-    
-    print("dd=")
-    print(dd)
-    
-    dd = ctx$addNamespace(dd)
-    
-    print("addNamespace dd=") 
-    print(dd)
-    
-    ctx$save(dd)
-    
-    print("saved")
-    
-    
-    
-    # ctx %>% 
-    #   select(.y, .ci, .ri) %>% 
-    #   group_by(.ci, .ri) %>%
-    #   summarise(mean = mean(.y)) %>%
-    #   ctx$addNamespace() %>%
-    #   ctx$save()
+    msgReactive$msg = "Running ... please wait ..."
+
+    tryCatch({
+      (ctx = getCtx(session)) %>%
+        select(.y, .ci, .ri) %>%
+        group_by(.ci, .ri) %>%
+        summarise(mean = mean(.y)) %>%
+        ctx$addNamespace() %>%
+        ctx$save()
+      
+      msgReactive$msg = "Done"
+      
+    }, error = function(e) {
+      msgReactive$msg = paste0("Failed : ", toString(e))
+      print(paste0("Failed : ", toString(e)))
+    })
   })
   
   output$mode = renderText({ 
     mode()
+  })
+  
+  output$msg = renderText({ 
+    msgReactive$msg
   })
   
   output$distPlot <- renderPlot({
@@ -108,7 +92,7 @@ shinyServer(function(input, output, session) {
     } 
     
     settings = settingsValue$value
-      
+    
     # generate bins based on input$bins from ui.R
     x    <- dataInput()[['.y']]
     bins <- seq(min(x), max(x), length.out = settings$bins + 1)
@@ -135,7 +119,7 @@ setSettings = function(session, settings){
   if (!is.null(fileSettings)){
     ctx$client$fileService$delete(fileSettings$id,fileSettings$rev)
   }
-   
+  
   workflowId = getWorkflowId(session)
   stepId = getStepId(session)
   workflow = ctx$client$workflowService$get(workflowId)
@@ -207,7 +191,7 @@ getCtx = function(session){
 
   token = query[["token"]]
   taskId = query[["taskId"]]
-   
+
   # create a Tercen context object using the token
   ctx = tercenCtx(taskId=taskId, authToken=token)
   
