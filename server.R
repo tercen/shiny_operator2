@@ -55,7 +55,8 @@ shinyServer(function(input, output, session) {
     msgReactive$msg = "Running ... please wait ..."
 
     tryCatch({
-      (ctx = getCtx(session)) %>%
+      ctx <- getCtx(session) 
+      ctx %>%
         select(.y, .ci, .ri) %>%
         group_by(.ci, .ri) %>%
         summarise(mean = mean(.y)) %>%
