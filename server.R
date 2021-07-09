@@ -23,6 +23,50 @@ shinyServer(function(input, output, session) {
   settingsValue$isInitialized = FALSE
   msgReactive = reactiveValues(msg = "")
  
+  output$body <- renderUI({
+    mode <- mode()
+    if (mode == "show") {
+      sidebarLayout(
+        sidebarPanel(),
+        mainPanel(
+          h3(textOutput("mode")))
+      )
+    } else if (mode == "run") {
+      sidebarLayout(
+        sidebarPanel(
+          shinyjs::hidden(sliderInput("bins",
+                                      "Number of bins:",
+                                      min = 1,
+                                      max = 50,
+                                      value = 1)),
+          actionButton("saveSettingsBtn", "Save settings", disabled=FALSE)
+        ),
+        mainPanel(
+          h3(textOutput("mode")),
+          plotOutput("distPlot"),
+          actionButton("runBtn", "Run", disabled=TRUE),
+          h5(textOutput("msg"))
+        )
+      )
+    } else if (mode == "showResult") {
+        sidebarLayout(
+          sidebarPanel(
+            shinyjs::hidden(sliderInput("bins",
+                                        "Number of bins:",
+                                        min = 1,
+                                        max = 50,
+                                        value = 1)),
+            actionButton("saveSettingsBtn", "Save settings", disabled=FALSE)
+          ),
+          mainPanel(
+            h3(textOutput("mode")),
+            plotOutput("distPlot"),
+            actionButton("runBtn", "Run", disabled=TRUE),
+            h5(textOutput("msg"))
+          )
+        )
+    }
+  })
   
   observeEvent(input$saveSettingsBtn, {
     showModal(modalDialog(
