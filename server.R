@@ -15,7 +15,7 @@ library(jsonlite)
 # options("tercen.workflowId"= "77d52bb01bd3676e779828d5a50047ae")
 # options("tercen.stepId"= "36600030-7fb6-4e61-a25c-fd421ec60367")
 
-shinyServer(function(input, output, session) {
+server <- shinyServer(function(input, output, session) {
   
   dataInput = reactive({getValues(session)})
   mode = reactive({getMode(session)})
