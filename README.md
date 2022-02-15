@@ -1,7 +1,7 @@
-##### Setup packrat 
+##### Setup renv 
 
 ```R
-packrat::init(options = list(use.cache = TRUE))
+renv::restore(prompt = F)
 ```
 
 ##### Description
